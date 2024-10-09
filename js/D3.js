@@ -181,7 +181,7 @@ console.log(eyeColor);
   Usa un while loop per calcolare la massa totale dell'equipaggio. Salvala in una variabile chiamata "crewMass".
 */
 
-//dopo svariati tentativi per inserirlo in un for loop e diversi console crash, l'unica soluzione mi è sembrata quella di mimare un for loop ed utilizzare un indice "a" per controllare l'iterazione e dargli un numero finito da rispettare.
+//dopo svariati tentativi per inserirlo in un for loop e diversi console crash, riguardando gli appunti, l'unica soluzione era quella di mimare un for loop ed utilizzare un indice esterno per controllare l'iterazione e dargli un numero finito da rispettare.
 let crewMass = 0;
 let index = 0;
 
@@ -203,6 +203,18 @@ console.log("La massa totale dell'equipaggio è pari a:", crewMass);
 
   Una volta fatto, modifica la massa di qualche elemento dell'equipaggio e vedi se riesci ad ottenere un messaggio diverso.
 */
+
+if (crewMass < 500) {
+  console.log("Ship is under loaded");
+} else if (crewMass > 500 && crewMass < 700) {
+  console.log("Ship is half loaded");
+} else if (crewMass > 700 && crewMass < 900) {
+  console.log("Warning: Load is over 700");
+} else if (crewMass > 900 && crewMass < 1000) {
+  console.log("Critical Load: Over 900");
+} else {
+  console.log("DANGER! OVERLOAD ALERT: escape from ship now!");
+}
 
 /* ESERCIZIO 8
   Usa un for loop per cambiare il valore della proprietà "gender" di alcuni personaggi dal valore "n/a" a "robot" (Tip: puoi effettuare la riassegnazione del valore corrispondente o creare un nuovo array)
