@@ -183,12 +183,12 @@ console.log(eyeColor);
 
 //dopo svariati tentativi per inserirlo in un for loop e diversi console crash, l'unica soluzione mi è sembrata quella di mimare un for loop ed utilizzare un indice "a" per controllare l'iterazione e dargli un numero finito da rispettare.
 let crewMass = 0;
-let a = 0;
+let index = 0;
 
-while (a < starWarsCharacters.length) {
-  let character = starWarsCharacters[a];
+while (index < starWarsCharacters.length) {
+  let character = starWarsCharacters[index];
   crewMass += character.mass;
-  a++;
+  index++;
 }
 console.log("La massa totale dell'equipaggio è pari a:", crewMass);
 
