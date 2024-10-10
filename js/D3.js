@@ -152,7 +152,7 @@ let eyeColor = {
   Ogni personaggio dovrà finire nell'array corrispondente al suo colore degli occhi (al valore della sua proprietà "eye_color").
 */
 
-for (i = 0; i < starWarsCharacters.length; i++) {
+for (let i = 0; i < starWarsCharacters.length; i++) {
   let character = starWarsCharacters[i];
   let eyesColor = character.eye_color;
   let characterName = character.name;
@@ -206,11 +206,11 @@ console.log("La massa totale dell'equipaggio è pari a:", crewMass);
 
 if (crewMass < 500) {
   console.log("Ship is under loaded");
-} else if (crewMass > 500 && crewMass < 700) {
+} else if (crewMass >= 500 && crewMass < 700) {
   console.log("Ship is half loaded");
-} else if (crewMass > 700 && crewMass < 900) {
+} else if (crewMass >= 700 && crewMass < 900) {
   console.log("Warning: Load is over 700");
-} else if (crewMass > 900 && crewMass < 1000) {
+} else if (crewMass >= 900 && crewMass < 1000) {
   console.log("Critical Load: Over 900");
 } else {
   console.log("DANGER! OVERLOAD ALERT: escape from ship now!");
@@ -237,12 +237,27 @@ console.log(starWarsCharacters);
   Una volta fatto crea un console.log per controllare la proprietà length di "charactersNames" prima e dopo l'operazione.
 */
 
-//???? CHIEDI
+for (let i = 0; ì < charactersNames.length; i++) {
+  const charName = charactersNames[i];
+
+  for (let j = 0; i < femaleCharacters.lenght; j++) {
+    const femObj = femaleCharacters[j];
+
+    if (charName === femObj.name) {
+      console.log("Corrispondenza trovata", i, charName);
+
+      charactersNames.splice(i, 1);
+    }
+  }
+}
 
 /* --EXTRA-- ESERCIZIO 10
   Crea una funzionalità che selezioni un elemento casuale dall'array "starWarsCharacters" e ne stampi in console le proprietà in modo discorsivo (a tuo piacimento).
 */
 // RICERCATO SU STACKOVERFLOW
 
-let randomElement = starWarsCharacters[Math.floor(Math.random() * starWarsCharacters.length)];
-console.log(randomElement);
+//let randomElement = starWarsCharacters[Math.floor(Math.random() * starWarsCharacters.length)];
+//console.log(randomElement);
+
+const randomIndex = Math.floor(Math.random(+starWarsCharacters.lenght));
+console.log(starWarsCharacters[randomIndex].name);
